@@ -1,0 +1,36 @@
+/* CSS */
+main {
+  max-width: 600px; /* Added max-width for better readability */
+  margin: 0 auto; /* centers the main content */
+}
+
+aside {
+  width: 250px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #f0f0f0;
+  color: #333;
+  float: right; /* positions the aside to the right */
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+}
+
+main img {
+  width: 150px;
+  height: auto;
+}
+
+p {
+  padding: 0;
+}
+
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  clear: both; /* ensures footer is below floated elements */
+}
