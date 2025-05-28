@@ -16,17 +16,18 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--primary-color); /* Changed text color to primary for better contrast */
+  color: var(--primary-color);
 }
 
 header, main, footer {
-  max-width: 840px; /* Changed to max-width for better responsiveness */
+  max-width: 960px; /* Adjusted max-width to give more space as per wireframe */
   margin: 0 auto;
 }
 
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
+  text-align: center; /* Center headings by default */
 }
 
 nav, p, section, article {
@@ -41,18 +42,20 @@ header {
   align-items: center;
   padding: 10px;
   background-color: var(--secondary-color);
-  gap: 10px; /* Space between grid items */
+  gap: 10px;
+  border-bottom: 1px solid #ccc; /* Adds a subtle line below header */
 }
 
 header img {
-  width: 80px; /* Adjust logo size as needed */
+  width: 80px;
   height: auto;
 }
 
 header h1 {
   grid-column: 2 / 3; /* Position h1 in the middle column */
   text-align: center;
-  margin: 0; /* Remove default margin */
+  margin: 0;
+  color: var(--primary-color); /* Ensure h1 color from primary */
 }
 
 header nav {
@@ -60,81 +63,106 @@ header nav {
   display: flex;
   justify-content: flex-end; /* Align nav items to the right */
   gap: 15px;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 header nav a {
   text-decoration: none;
   color: var(--primary-color);
   padding: 5px 10px;
+  border: 1px solid var(--primary-color); /* Added border to match wireframe nav buttons */
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header nav a:hover {
-  background-color: var(--accent1-color);
+  background-color: var(--primary-color);
   color: white;
 }
 
-
-.hero {
-  position: relative;
-  text-align: center;
+/* New Hero Section Styling (Matches updated wireframe) */
+.hero-new {
+  padding: 30px 20px;
+  border: 1px solid #ccc; /* Border around the section */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.hero img {
-  display: block;
+.hero-new h2 {
+  margin-bottom: 20px;
+  font-size: 2em; /* Adjust font size as per wireframe visual */
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Text on left, small image on right */
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-content p {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.hero-small-img {
   width: 100%;
+  max-width: 150px; /* Control size of the small image */
   height: auto;
+  border: 1px solid #ccc; /* Add a border around the image */
+  background-color: #f0f0f0; /* Placeholder background */
+  display: block; /* Ensure it takes up its own space */
+  margin: 0 auto; /* Center image within its grid cell */
 }
 
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%); /* Center the article horizontally */
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 16px;
-  border-radius: 8px;
-  width: 90%; /* Adjust width as needed */
-  max-width: 500px; /* Max width for readability */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* History Section Styling (Matches updated wireframe) */
+.history-section-new {
+  padding: 30px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 10px;
-  border-radius: 5px; /* Slightly round the employee image corners */
+.history-section-new h2 {
+  margin-bottom: 20px;
 }
 
-/* History Section */
-.history-section {
-    padding: 20px;
-    line-height: 1.6;
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Text | Image | Text */
+  gap: 20px;
+  align-items: start; /* Align content to the top */
 }
 
-.history-section h2 {
-    text-align: center;
-    margin-bottom: 15px;
+.history-content p {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
 }
 
-.history-section p {
-    text-align: justify;
-    margin-bottom: 10px;
+.history-img {
+  width: 100%;
+  max-width: 250px; /* Control size of the history image */
+  height: auto;
+  border: 1px solid #ccc; /* Add a border around the image */
+  background-color: #f0f0f0; /* Placeholder background */
+  display: block;
+  margin: 0 auto; /* Center image within its grid cell */
 }
 
 /* Adventure Awaits You! section */
 .adventures-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid for images */
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px; /* Increased gap for better spacing */
   padding: 20px;
   text-align: center;
+  border: 1px solid #ccc; /* Border around the section */
+  margin-bottom: 20px;
 }
 
 .adventures-section h2 {
-    grid-column: 1 / -1; /* Make the heading span all columns */
+    grid-column: 1 / -1;
     margin-bottom: 20px;
 }
 
@@ -146,12 +174,13 @@ header nav a:hover {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #ddd; /* Added a border to figures */
 }
 
 .adventures-section figure img {
   width: 100%;
-  height: 120px; /* Fixed height for consistency */
-  object-fit: cover; /* Ensures images cover the area without distortion */
+  height: 120px;
+  object-fit: cover;
   border-radius: 5px;
   margin-bottom: 8px;
 }
@@ -166,22 +195,23 @@ header nav a:hover {
 /* Footer Styling */
 footer {
   background-color: var(--secondary-color);
-  text-align: center;
   padding: 16px;
   font-size: 0.9rem;
-  display: flex; /* Use flexbox for footer content */
+  display: flex;
   justify-content: space-between; /* Space between copyright and social media */
   align-items: center;
+  border-top: 1px solid #ccc; /* Adds a subtle line above footer */
 }
 
 footer p {
-    margin: 0; /* Remove default margin from paragraph */
+    margin: 0;
+    color: var(--primary-color); /* Ensure footer text color */
 }
 
 .socialmedia {
   display: flex;
   gap: 16px;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .socialmedia a img {
