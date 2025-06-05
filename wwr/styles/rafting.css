@@ -224,3 +224,251 @@ footer p {
 .socialmedia a img:hover {
   transform: scale(1.1);
 }
+
+/* --- Styles for contact.html --- */
+
+/* General styling for new sections on contact page */
+.contact-hero, .company-info, .employee-profiles, .contact-form-section {
+    padding: 20px;
+    margin-bottom: 25px; /* Slightly increased margin for better separation */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Added subtle shadow for depth */
+}
+
+.contact-hero h2 {
+    margin-bottom: 15px;
+    font-size: 2.2em; /* Larger heading for hero */
+    color: var(--primary-color);
+}
+
+.contact-hero p {
+    text-align: center;
+    line-height: 1.6;
+    max-width: 700px; /* Limit width for readability */
+    margin: 0 auto;
+}
+
+/* Company Information Styling */
+.company-info h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+.company-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    text-align: center; /* Center text as per conceptual wireframe */
+}
+
+.company-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.company-info a:hover {
+    text-decoration: underline;
+    color: var(--accent1-color);
+}
+
+.map-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary-color); /* Stronger border for the map */
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%; /* Ensure map container spans full width of its parent */
+    max-width: 700px; /* Max width for map */
+    margin-left: auto; /* Center map */
+    margin-right: auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px; /* Consistent map height */
+    display: block;
+}
+
+/* Employee Profiles Styling */
+.employee-profiles h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+.profiles-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows profiles to wrap to next line on smaller screens */
+}
+
+.profiles-grid figure {
+    flex: 1 1 250px; /* Flex-grow, flex-shrink, base-width for responsiveness */
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    display: flex; /* Make figure a flex container */
+    flex-direction: column; /* Stack image and caption */
+    align-items: center; /* Center contents */
+}
+
+.profiles-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 4px solid var(--secondary-color); /* More prominent border for images */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for images */
+}
+
+.profiles-grid figcaption {
+    font-weight: bold;
+    color: var(--accent1-color);
+    font-size: 1.1em;
+    padding-top: 5px; /* Small padding above caption */
+}
+
+/* Contact Form Styling */
+.contact-form-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Slightly increased gap for form elements */
+    max-width: 650px; /* Increased max width for form */
+    margin: 0 auto;
+    padding: 30px; /* More padding inside form */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* More prominent shadow for form */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Space between label and input */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.05em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 12px; /* Increased padding for inputs */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Slightly more rounded corners */
+    font-size: 1em;
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+.fieldset {
+    border: 1px solid #b0b0b0; /* Stronger border for fieldset */
+    padding: 20px; /* More padding inside fieldset */
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Ensure space around fieldset */
+    background-color: #f9f9f9;
+}
+
+.fieldset legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+/* Radio buttons and their labels */
+.form-group input[type="radio"] {
+    margin-right: 8px; /* Space between radio button and its label */
+}
+
+.form-group input[type="radio"] + label {
+    font-weight: normal;
+    color: #333; /* Darker color for radio labels */
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Space between checkbox and label */
+    margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    transform: scale(1.2); /* Slightly larger checkbox */
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    color: #333;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px; /* Larger button padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em; /* Larger font for button */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+    width: fit-content;
+    margin-top: 20px; /* Space above button */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2); /* Shadow for button */
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent1-color);
+    transform: translateY(-3px) scale(1.02); /* More pronounced hover effect */
+}
+
+/* Wireframe link in footer (specific to contact.html) */
+.wireframe-link-footer {
+    text-align: center; /* Ensure the paragraph is centered */
+    width: 100%; /* Take full width of footer */
+    margin-top: 10px; /* Space from social media icons */
+}
+
+.wireframe-link-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.wireframe-link-footer a:hover {
+    text-decoration: underline;
+    color: var(--accent1-color);
+}
