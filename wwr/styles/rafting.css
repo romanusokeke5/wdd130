@@ -472,3 +472,393 @@ button[type="submit"]:hover {
     text-decoration: underline;
     color: var(--accent1-color);
 }
+
+/* --- W06 Additions for index.html (Home Page) --- */
+
+/* Hero Section */
+.hero-home {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area */
+    display: block;
+    filter: brightness(0.7); /* Slightly darken image for text readability */
+}
+
+.hero-text-overlay {
+    position: absolute;
+    color: white;
+    z-index: 2; /* Ensures text is above the image */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for text */
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.hero-text-overlay h2 {
+    color: white;
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-text-overlay p {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Common Call to Action Button Style */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent2-color); /* Green accent color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: none; /* Ensure no default button border */
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #04b383; /* Slightly darker green on hover */
+    transform: translateY(-3px);
+}
+
+/* Newsletter Signup Section */
+.newsletter-signup {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--secondary-color); /* Yellow background */
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.newsletter-signup h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+.newsletter-signup p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap; /* Allows inputs to wrap on smaller screens */
+    justify-content: center;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-form .form-group {
+    flex: 1 1 280px; /* Flex-basis for inputs */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.newsletter-form label {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%; /* Ensure inputs take full width of their flex item */
+}
+
+.signup-button {
+    background-color: var(--primary-color); /* Dark blue for signup button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; /* Center button within flex container */
+    margin-top: 10px; /* Space above button */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.signup-button:hover {
+    background-color: var(--accent1-color); /* Reddish on hover */
+    transform: translateY(-2px);
+}
+
+/* Home Page Call to Action (below newsletter) */
+.home-call-to-action {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.home-call-to-action h3 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.home-call-to-action p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+/* Home Page Grid Content (CSS Grid) */
+.home-grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.grid-item h4 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Adjust the third grid item to take full width on its row if possible, or adjust grid */
+.home-grid-content .content-text {
+    grid-column: span 2; /* Span two columns if available */
+    /* On smaller screens (auto-fit), this will naturally stack */
+    text-align: left;
+    padding: 30px;
+    background-color: #e0f2f7; /* Slightly different background for text-only item */
+    border-left: 5px solid var(--primary-color); /* Emphasize this block */
+}
+
+/* --- W06 Additions for trips.html (Trips Page) --- */
+
+.trips-intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e6f7ff; /* Light blue background */
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.trips-intro h2 {
+    color: var(--primary-color);
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.trips-intro p {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trips-intro .trips-cta {
+    background-color: var(--accent1-color); /* Red accent color for trips CTA */
+}
+
+.trips-intro .trips-cta:hover {
+    background-color: #d13d5b; /* Darker red on hover */
+}
+
+/* Trip Details Grid */
+.trip-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for trip cards */
+    gap: 30px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.trip-details-grid h3 {
+    grid-column: 1 / -1; /* Make the heading span all columns */
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.trip-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensures image corners are rounded */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px; /* Padding for content below */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Crop image to fit */
+    display: block;
+    margin-bottom: 15px;
+}
+
+.trip-card h4 {
+    color: var(--primary-color);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.trip-card p {
+    color: #666;
+    line-height: 1.6;
+    padding: 0 20px;
+    flex-grow: 1; /* Allows paragraph to take available space */
+}
+
+.trip-card ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.trip-card ul li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.trip-card ul li strong {
+    color: var(--primary-color);
+}
+
+
+/* Trip Summary Table */
+.trip-summary-table {
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #f8f8f8; /* Light background for table section */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+.trip-summary-table h3 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.trip-summary-table table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders between cells */
+    margin: 0 auto;
+    max-width: 800px; /* Max width for table */
+}
+
+.trip-summary-table th,
+.trip-summary-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.trip-summary-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.trip-summary-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping */
+}
+
+.trip-summary-table tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+/* Footer link for wireframe on trips.html */
+/* (Make sure this doesn't conflict with the contact.html wireframe link style if you have a general rule) */
+.wireframe-link-footer {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.wireframe-link-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.wireframe-link-footer a:hover {
+    text-decoration: underline;
+    color: var(--accent1-color);
+}

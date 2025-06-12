@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rafting Adventures: Your premier destination for exhilarating whitewater rafting experiences. Discover trips, sign up for our newsletter, and more!" />
+  <meta name="author" content="Okeke Romanus" />
+  <title>Home - Rafting Adventures</title>
+  <link rel="stylesheet" href="styles/rafting.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Rafting Adventures Logo" />
+    <h1>White Water Rafting</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-home">
+      <img src="images/hero_home.jpg" alt="Rafting adventure on a river" />
+      <div class="hero-text-overlay">
+        <h2>Experience the Rush of Rafting!</h2>
+        <p>Embark on an unforgettable journey with Rafting Adventures. Your adventure starts here!</p>
+        <a href="trips.html" class="cta-button hero-cta">Explore Our Trips</a>
+      </div>
+    </section>
+
+    <section class="newsletter-signup">
+      <h2>Stay in the Loop!</h2>
+      <p>Sign up for our monthly newsletter to get the latest trip updates, special offers, and rafting tips!</p>
+      <form action="/submit-newsletter" method="post" class="newsletter-form">
+        <div class="form-group">
+          <label for="newsletter_name">Name:</label>
+          <input type="text" id="newsletter_name" name="newsletter_name" required>
+        </div>
+        <div class="form-group">
+          <label for="newsletter_email">Email:</label>
+          <input type="email" id="newsletter_email" name="newsletter_email" required>
+        </div>
+        <button type="submit" class="signup-button">Sign Up Now!</button>
+      </form>
+    </section>
+
+    <section class="home-call-to-action">
+      <h3>Ready for Your Next Adventure?</h3>
+      <p>Browse our exciting range of whitewater rafting trips designed for all skill levels.</p>
+      <a href="trips.html" class="cta-button">View All Trips!</a>
+    </section>
+
+    <section class="home-grid-content">
+      <div class="grid-item">
+        <img src="images/home_grid_img1.jpg" alt="Rafting team paddling" />
+        <h4>Our Passion for Rivers</h4>
+        <p>At Rafting Adventures, our passion is the river. We believe in sharing the thrill of whitewater and the tranquility of nature with everyone. Our experienced guides ensure a safe, fun, and memorable journey on every trip.</p>
+      </div>
+      <div class="grid-item">
+        <img src="images/home_grid_img2.jpg" alt="Scenic river landscape" />
+        <h4>Unforgettable Landscapes</h4>
+        <p>Our trips take you through some of the most breathtaking natural landscapes. From towering canyons to lush forests, every turn of the river reveals new wonders. Get ready to disconnect and immerse yourself in the wild.</p>
+      </div>
+      <div class="grid-item content-text">
+        <h4>Why Choose Us?</h4>
+        <p>With over 20 years of experience, Rafting Adventures is committed to excellence. We prioritize safety, employ highly trained guides, and use top-of-the-line equipment. Our dedication to conservation also means we strive to protect the beautiful environments we explore.</p>
+        <p>Whether you're a first-timer or an experienced paddler, we have the perfect adventure for you. Our diverse range of trips caters to all levels of excitement and duration.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Rafting Adventures | Nigeria </p>
+    <nav class="socialmedia">
+      <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" /></a>
+      <a href="https://whatsapp.com" target="_blank"><img src="images/whatsapp.png" alt="Whatsapp" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a>
+    </nav>
+    </footer>
+</body>
+</html>
