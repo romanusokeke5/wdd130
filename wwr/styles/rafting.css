@@ -862,3 +862,172 @@ button[type="submit"]:hover {
     text-decoration: underline;
     color: var(--accent1-color);
 }
+/* ... (existing CSS content) ... */
+
+/* --- Media Queries for Responsiveness --- */
+
+@media (max-width: 768px) {
+  /* Adjustments for Tablets and smaller Desktops */
+
+  /* Header adjustments for medium screens */
+  header {
+    grid-template-columns: 1fr auto; /* Logo on left, h1/nav on right */
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  header h1 {
+    grid-column: 1 / -1; /* Make h1 span full width on smaller screens */
+    font-size: 1.8em;
+    order: -1; /* Move h1 above logo temporarily to stack better */
+  }
+
+  header nav {
+    grid-column: 1 / -1; /* Make nav span full width */
+    justify-content: center; /* Center nav items */
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  /* About Us page - Hero and History section for tablets */
+  .hero-content,
+  .history-content {
+    grid-template-columns: 1fr; /* Stack content vertically */
+    text-align: center;
+  }
+
+  .hero-small-img,
+  .history-img {
+    max-width: 200px; /* Adjust max-width for images to prevent them from being too large */
+    margin: 20px auto; /* Center images when stacked */
+  }
+
+  /* Home page - grid content adjustments */
+  .home-grid-content .content-text {
+    grid-column: 1 / -1; /* Ensure it takes full width when other items stack */
+    text-align: center; /* Center text when it's a single column */
+    border-left: none; /* Remove left border when stacking */
+    border-top: 5px solid var(--primary-color); /* Add a top border instead */
+  }
+
+  /* Newsletter form on Home page */
+  .newsletter-form {
+    flex-direction: column; /* Stack name, email, and button */
+    align-items: center;
+  }
+
+  .newsletter-form .form-group {
+    flex: none; /* Remove flex-basis for stacking */
+    width: 90%; /* Give inputs a percentage width */
+    max-width: 400px; /* Limit their max width */
+  }
+
+  .signup-button {
+    width: 90%; /* Make button also take up width */
+    max-width: 400px;
+  }
+
+  /* Employee profiles on Contact page */
+  .profiles-grid {
+    flex-direction: column; /* Stack profiles vertically on smaller screens */
+    align-items: center;
+  }
+
+  .profiles-grid figure {
+    width: 90%; /* Make figures take up more width */
+    max-width: 350px;
+  }
+
+  /* Contact form on Contact page */
+  .contact-form-section form {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  /* Table on Trips page */
+  .trip-summary-table {
+    padding: 10px; /* Reduce padding around table */
+  }
+
+  .trip-summary-table th,
+  .trip-summary-table td {
+    padding: 8px; /* Reduce cell padding */
+    font-size: 0.85em; /* Slightly smaller font for table text */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Further adjustments for Mobile Phones */
+
+  /* General font size reduction for readability */
+  body {
+    font-size: 0.9em;
+  }
+
+  h1 {
+    font-size: 1.5em; /* Smaller h1 for mobile */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Smaller h2 for mobile */
+  }
+
+  h3 {
+    font-size: 1.5em; /* Smaller h3 for mobile */
+  }
+
+  /* Header specific for very small screens */
+  header {
+    grid-template-columns: 1fr; /* Stack all header items */
+    text-align: center;
+  }
+
+  header h1 {
+    order: 2; /* Adjust order for stacked header */
+    margin-top: 5px;
+  }
+
+  header nav {
+    order: 3; /* Adjust order for stacked header */
+    flex-direction: column; /* Stack nav links vertically */
+    align-items: center; /* Center stacked nav links */
+    gap: 8px;
+  }
+
+  header img {
+    order: 1; /* Place logo first */
+    margin: 0 auto; /* Center logo */
+  }
+
+  /* Hero section on Home page */
+  .hero-home {
+    height: 400px; /* Reduce hero height on mobile */
+  }
+
+  .hero-text-overlay h2 {
+    font-size: 2em; /* Smaller hero heading */
+  }
+
+  .hero-text-overlay p {
+    font-size: 1em; /* Smaller hero paragraph */
+  }
+
+  .cta-button {
+    padding: 10px 20px; /* Smaller padding for CTA buttons */
+    font-size: 1em;
+  }
+
+  /* Footer adjustments */
+  footer {
+    flex-direction: column; /* Stack footer content */
+    text-align: center;
+    gap: 10px;
+  }
+
+  .socialmedia {
+    margin-top: 10px;
+  }
+
+  .wireframe-link-footer {
+    margin-top: 5px; /* Adjust spacing */
+  }
+}
